@@ -21,7 +21,7 @@ body { padding-top: 70px }
     box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.75);
 }
 .image-shrink {
-    width: 11%;
+    max-width: 100%;
     height: auto;
 }
 .profile_picture {
@@ -29,14 +29,9 @@ body { padding-top: 70px }
     height: auto;
     display: inline-block;
 }
-.jumbotron h1 {
-    line-height: 1;
-    color: inherit;
-    display: inline-block;
-}
 .jumbotron p {
     line-height: 1.4;
     display: block;
 }
-.jumbotron p#inline-block { display: inline-block }
-.jumbotron h1#inline-block { display: inline-block }
+.jumbotron p#inline-block { display: inline-block; clear:both; }
+.jumbotron h1#inline-block { display: inline-block; }

@@ -34,12 +34,14 @@
     </nav>
 
     <div class="container">
-        <div class="jumbotron">
-          <%=image_tag 'profile.jpg', class:'image-shadow image-round image-shrink img-responsive profile_picture pull-right'%>
-            <h1>The Agile Philosopher
+        <div class="jumbotron col-6-md">
+
+            <h1 id="inline-block" class="span8">
+              The Agile Philosopher
             </h1>
-            <p style="margin-left:4%">
-              Let's inject some existentialism into that software grind.
+            <%=image_tag 'profile.jpg', class:'image-shadow image-round image-shrink img-responsive profile_picture pull-right span4 offset8'%>
+            <p style="margin-left:4%" id="inline-block" class="span8">
+              Let's inject some existentialism into that daily software grind.
             </p>
       </div>
      <%= yield %>
