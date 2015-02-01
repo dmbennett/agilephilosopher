@@ -4283,7 +4283,7 @@ a.list-group-item.active > .badge,
 }
 .jumbotron p {
     line-height: 1.4;
-    display: inline-block;
+    display: block;
 }
 .container .jumbotron {
     border-radius: 6px;

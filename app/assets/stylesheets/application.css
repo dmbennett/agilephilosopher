@@ -13,24 +13,30 @@
  *= require_tree
  *= require_self
  */
-
-body {
-    padding-top: 70px;
-}
-.image-round{
-    border-radius: 50%;
-}
+body { padding-top: 70px }
+.image-round { border-radius: 50% }
 .image-shadow {
     -webkit-box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.75);
     box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.75);
 }
-.image-shrink{
+.image-shrink {
     width: 11%;
     height: auto;
 }
-.profile_picture{
+.profile_picture {
     width: 11%;
     height: auto;
-    display:inline-block;
+    display: inline-block;
 }
+.jumbotron h1 {
+    line-height: 1;
+    color: inherit;
+    display: inline-block;
+}
+.jumbotron p {
+    line-height: 1.4;
+    display: block;
+}
+.jumbotron p#inline-block { display: inline-block }
+.jumbotron h1#inline-block { display: inline-block }
