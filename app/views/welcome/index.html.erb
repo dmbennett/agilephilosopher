@@ -48,12 +48,13 @@
           <h1>Home</h1>
         </div>
           <% if @robby == 'yep' %>
-              <div class="img-rounded img-responsive center-block">
-                <%=image_tag('brace-yourself.jpg')%>
+              <div>
+                <%=image_tag('brace-yourself.jpg', class: "img-rounded img-responsive center-block")%>
               </div>
           <%end%>
-
-
+<p></p>
+        <div class="page-header" </div>
+<p></p>
         <div class="btn-group btn-group-justified">
           <a href="/?robby=yep" class="btn btn-primary">Are you Robby?</a>
           <a href="/?robby=nope" class="btn btn-danger">Not Robby?</a>
