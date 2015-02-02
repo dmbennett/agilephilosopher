@@ -7,5 +7,22 @@
         <div class="page-header">
             <h1>Home</h1>
         </div>
+
+        <div class="carousel slide">
+              <!-- Indicators -->
+              <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+              </ol>
+
+              <div class="carousel-inner">
+                  <%@carousel_photos.each do |my_photo| %>
+                      <div class="item">
+                        <%= image_tag(my_photo, class:"img-responsive")%>
+                      </div>
+                  <%end%>
+              </div>
+        </div>
     </body>
 </html>
