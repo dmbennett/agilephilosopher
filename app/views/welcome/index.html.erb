@@ -5,24 +5,47 @@
 </head>
     <body>
         <div class="page-header">
-            <h1>Home</h1>
+            <h1>Sloths-R-Us</h1>
         </div>
 
-        <div class="carousel slide">
+        <div id="myCarousel" class="carousel slide">
               <!-- Indicators -->
               <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <% @carousel_photos.each do%>
+                    <% if @carousel_photo_counter == 0%>
+                        <li data-target="#myCarousel" data-slide-to="@carousel_photo_counter" class="active"></li>
+                    <% else %>
+                        <li data-target="#myCarousel" data-slide-to="@carousel_photo_counter"></li>
+                    <%end%>
+                <%end%>
               </ol>
 
-              <div class="carousel-inner">
+              <div class="carousel-inner" role="listbox">
                   <%@carousel_photos.each do |my_photo| %>
-                      <div class="item">
-                        <%= image_tag(my_photo, class:"img-responsive")%>
+                    <% if @carousel_content_counter == 0 %>
+                      <div class="item active">
+                        <%= image_tag(my_photo, class:"img-responsive carousel_photo")%>
                       </div>
+                    <% else %>
+                        <div class="item">
+                          <%= image_tag(my_photo, class:"img-responsive carousel_photo")%>
+                        </div>
+                    <%end%>
+                    <% @carousel_conten_counter = @carousel_content_counter+=1%>
                   <%end%>
               </div>
+          <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+
+        <div class="page-header">
+          <h1>Home</h1>
         </div>
     </body>
 </html>
