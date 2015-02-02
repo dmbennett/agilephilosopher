@@ -37,8 +37,7 @@ body { padding-top: 70px }
 .jumbotron h1#inline-block { display: inline-block; }
 
 .carousel_photo{
-    max-width: 100%;
-    height: auto;
+    max-width: 80%;
     margin-right: auto;
     margin-left: auto;
 }
