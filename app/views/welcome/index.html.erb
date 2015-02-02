@@ -31,7 +31,7 @@
                           <%= image_tag(my_photo, class:"img-responsive carousel_photo")%>
                         </div>
                     <%end%>
-                    <% @carousel_conten_counter = @carousel_content_counter+=1%>
+                    <% @carousel_content_counter = @carousel_content_counter+=1%>
                   <%end%>
               </div>
           <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
@@ -46,6 +46,16 @@
 
         <div class="page-header">
           <h1>Home</h1>
+          <% if @robby == 'yep' %>
+              <div class="image-round">
+                <%image_tag('brace-yourself.jpg')%>
+              </div>
+          <%end%>
+        </div>
+
+        <div class="btn-group btn-group-justified">
+          <a href="/?robby=yep" class="btn btn-primary">Are you Robby?</a>
+          <a href="/?robby=nope" class="btn btn-danger">Not Robby?</a>
         </div>
     </body>
 </html>

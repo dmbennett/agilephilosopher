@@ -2,10 +2,16 @@
 <html>
 <head>
   <title>Agile Philosopher Contact</title>
+
 </head>
     <body>
         <div class="page-header">
-            <h1>Contact</h1>
+            <h1>Contact this!</h1>
+        </div>
+
+        <div class="btn-group btn-group-justified">
+          <div class="btn btn-primary"><%= link_to 'Are you Robby?', '/?robby=yep'%></div>
+          <a href="/contact?robby=nope" class="btn btn-danger">Not Robby?</a>
         </div>
     </body>
 </html>
