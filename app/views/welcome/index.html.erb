@@ -24,11 +24,11 @@
                   <%@carousel_photos.each do |my_photo| %>
                     <% if @carousel_content_counter == 0 %>
                       <div class="item active">
-                        <%= image_tag(my_photo, class:"img-responsive carousel_photo")%>
+                        <%= image_tag(my_photo, class:"img-responsive carousel_photo img-rounded")%>
                       </div>
                     <% else %>
                         <div class="item">
-                          <%= image_tag(my_photo, class:"img-responsive carousel_photo")%>
+                          <%= image_tag(my_photo, class:"img-responsive carousel_photo img-rounded")%>
                         </div>
                     <%end%>
                     <% @carousel_content_counter = @carousel_content_counter+=1%>
@@ -46,16 +46,18 @@
 
         <div class="page-header">
           <h1>Home</h1>
+        </div>
           <% if @robby == 'yep' %>
-              <div class="image-round">
-                <%image_tag('brace-yourself.jpg')%>
+              <div class="img-rounded img-responsive center-block">
+                <%=image_tag('brace-yourself.jpg')%>
               </div>
           <%end%>
-        </div>
+
 
         <div class="btn-group btn-group-justified">
           <a href="/?robby=yep" class="btn btn-primary">Are you Robby?</a>
           <a href="/?robby=nope" class="btn btn-danger">Not Robby?</a>
         </div>
+
     </body>
 </html>
