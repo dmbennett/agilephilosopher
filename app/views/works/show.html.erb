@@ -3,8 +3,10 @@
 <div class="container">
   <!-- Example row of columns -->
   <div class="row">
-    <div class="col-lg-4 col-lg-offset-2">
-      <h2><%=@work.name%></h2>
+    <div class="col-md4">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <h2><%=@work.name%></h2>
       <p>
         <strong>Description:</strong>
         <%= @work.description %>

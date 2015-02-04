@@ -8,9 +8,9 @@
 <div>
     <% @works.each do |work| %>
       <div class="btn-group">
-        <td><%= link_to 'Show', work, class:"btn btn-default", role:"button"%></td>
+        <td><%= link_to 'View', work, class:"btn btn-default", role:"button"%></td>
         <td><%= link_to 'Edit', edit_work_path(work), class:"btn btn-default", role:"button"%></td>
-        <td><%= link_to 'Destroy', work, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-default", role:"button"%></td>
+        <td><%= link_to 'Delete', work, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-default", role:"button"%></td>
       </div>
       <div class="col-md4">
         <div class="panel panel-default">
